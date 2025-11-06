@@ -1,11 +1,15 @@
-import React from 'react';
-import './App.css';
-import LeadsByStatusList from './component/LeadsBystatusList';
+import React from "react";
+import LeadsStatusChart from "LeadsStatusChart";
+import LeadsStatusTable from "./LeadsStatusTable";
 
 function App() {
   return (
-    <div className="App">
-      <LeadsByStatusList/>
+    <div className="bg-gray-100 min-h-screen flex flex-col items-center p-8 gap-8">
+      {/* Chart Section */}
+      <LeadsStatusChart />
+
+      {/* Table Section */}
+      <LeadsStatusTable />
     </div>
   );
 }

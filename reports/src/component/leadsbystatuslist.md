@@ -129,7 +129,51 @@ const LeadsByStatusList = () => {
             </tbody>
           </table>
 
-          
+          {/* Pagination with custom SVG Arrows */}
+          <div className="flex items-center justify-center gap-2 mt-6 select-none">
+            {/* Left Arrow */}
+            <button
+              onClick={handlePrev}
+              disabled={page === 1}
+              className={`w-8 h-8 flex items-center justify-center rounded-sm ${
+                page === 1
+                  ? "text-gray-300 bg-gray-100 cursor-not-allowed"
+                  : "hover:bg-gray-200"
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="black"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                className={page === 1 ? "opacity-30" : ""}
+              >
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+              </svg>
+            </button>
+
+            {/* Page Number */}
+            <div className="w-8 h-8 flex items-center justify-center rounded-sm bg-gray-100 text-gray-800 text-sm font-semibold border border-gray-200">
+              {page}
+            </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={handleNext}
+              className="w-8 h-8 flex items-center justify-center hover:bg-gray-200 rounded-sm"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="black"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+              >
+                <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>

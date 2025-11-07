@@ -85,7 +85,7 @@ const LeadsStatusChart = () => {
 
   return (
     // ✅ Full background section
-    <div className="min-h-screen flex items-center justify-center bg-[#f3f4f6] p-10">
+    <div className="bg-[#e5e9ec] p-6 flex justify-center">
       {/* Chart Card */}
       <div className="bg-white border border-gray-300 rounded-md shadow-lg w-full max-w-6xl">
         {/* Header */}
